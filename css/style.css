@@ -1,0 +1,209 @@
+* , *::after , *::before{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 20px;
+}
+body{
+    background-image: url('../imgs/taskList-bg-3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+}
+@font-face{
+    font-family: 'roboto-black';
+    src: url('../webfonts/Roboto-Black.ttf');
+}
+@font-face{
+    font-family: 'roboto-regular';
+    src: url('../webfonts/Roboto-Regular.ttf');
+}
+@font-face{
+    font-family: 'roboto-italic';
+    src: url('../webfonts/Roboto-BoldItalic.ttf');
+}
+.center{
+    text-align: center;
+}
+.right{
+    text-align: right;
+}
+.left{
+    text-align: left;
+}
+.title{
+    font-size: 5rem;
+    text-align: center;
+    font-family: 'roboto-black';
+    color: #fff;
+    opacity: 0.8;
+    text-shadow: #474747 3px 5px 2px, 6px 14px 11px rgba(28,110,164,0);
+}
+.container{
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+}
+/* ADD TASK STYLE */
+.btn{
+    /* background-image: linear-gradient(to right, #24345a, #2d477e, #355ba4, #3c70cb, #4286f4); */
+    background-color: #5A95FF;
+    color: #fff;
+    width: 15%;
+    border:  0;
+    outline: 0;
+    padding: 10px;
+    font-size: 0.8rem;
+    border-radius: 20px;
+    margin: 15px 0px;
+    cursor: pointer;
+    box-shadow: 0px 8px 15px rgba(48, 49, 49, 0.4);
+    transition: all 0.3s ease 0s;
+}
+.btn:hover{
+    background-color: #FF606C !important;
+    box-shadow : 0px 15px 20px rgba(68, 70, 69, 0.4) !important;
+    color: #fff !important;
+    transform: translateY(-7px);
+}
+.input{
+    width: 100%;
+    padding:10px 8px;
+    border: 0;
+    border-bottom: 1px solid rgb(211, 207, 207);
+    outline: none;
+    font-family: 'roboto-italic';
+    color: #38119E;
+    font-size: 1.5rem;
+}
+.input:focus{
+    border: 3px solid #5A95FF;
+}
+input::placeholder{
+    font-family: 'roboto-italic';
+    color: rgb(190, 186, 186);
+    font-size: 0.8rem;
+}
+/* EDIT TASK STYLE */
+.edit-task .my-tasks{
+    display: grid;
+    grid-template-columns: 48% 48%;
+    justify-content: space-between;
+
+}
+.edit-task .filter{
+    width: 45%;
+}
+.filter:focus{
+    text-align: left;
+}
+.edit-task ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr ;
+    transition: all 0.3s ease 0s;
+}
+.edit-task ul li{
+    color: rgb(94, 23, 35);
+    transition: all 0.3s ease 0s;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    text-align: left;
+    font-family: 'roboto-black';
+    padding: 5px 20px;
+    border: 1px solid rgb(238, 236, 236);
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+.edit-task .collection li:hover{
+    background-color: rgb(218, 217, 216);
+    color: #5A95FF;
+}
+.edit-task .collection li:hover i{
+    color: #fff;
+}
+.edit-task ul li i{
+    color:#EFE0E7;
+    cursor: pointer;
+    font-size: 1rem;
+    float: right;
+}
+.edit-task ul li i:hover , .edit-task .collection li i:hover{
+    color: rgb(255, 176, 5) !important;
+    transition: all 0.3s ease 0s;
+}
+.edit-task .btn{
+    background-color: #43171E;
+}
+.my-tasks div h5{
+   color: #43171E;
+   font-family: 'roboto-black';
+   font-size: 0.8rem;
+   margin-bottom: 20px;
+}
+.my-tasks div:last-child div{
+    visibility: hidden;
+ }
+.my-tasks .completed{
+    border: 1px solid rgb(238, 236, 236);
+ }
+.my-tasks .completed li{
+     color: rgb(185, 190, 185) !important;
+     border: 0;
+     text-decoration: line-through;
+     cursor: text;
+     font-family: 'roboto-regular';
+ }
+ .green-check{
+     opacity: 0;
+ }
+.check{
+     font-size: 350px;
+     color: green;
+     position: absolute;
+     top:  50%;
+     left: 50%;
+     transform: translate(-50% , -50%);
+     z-index: 4;
+     animation: animation 1s;
+     transition: 0.5s all ease;
+ }
+ @keyframes animation{
+     0%{
+        font-size: 100px;
+        opacity: 0.2;
+     }
+     100%{
+        font-size: 400px;
+        opacity: 0.9;
+     }
+ }
+ @media(max-width: 767px){
+html{
+    font-size: 15px;
+}
+body{
+    display: block;
+}
+.btn{
+    width: 10%;
+    padding: 5px;
+    font-size: 0.5rem;
+}
+.container{
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 0;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+}
+ }

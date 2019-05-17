@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="imgs/Todo-list-icon.png">
+    <link href="css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>ToDo List</title>
+</head>
+<body>
+    <h1 class="title">Todo List</h1>
+    <div class="container ">
+                <form id="task-form" class="add-task">
+                    <div class="input-field">
+                        <input type="text" class="task input" id="task" placeholder="new task.." autocomplete="off"       onfocus="this.placeholder = '' "
+                        onblur="this.placeholder = 'new task..'" />
+                    </div>
+                    <div class="add-task-btn left">
+                        <input type="submit" value="Add Task" class="btn">
+                    </div>
+                </form>
+                <div class="edit-task">
+                    <div class="my-tasks">
+                        <div class="center">
+                            <h5>Tasks</h5>
+                            <div class="input-field">
+                                    <input type="text" class="filter input center" id="filter"
+                                     placeholder="filter task"
+                                      onfocus="this.placeholder = '' "
+                                      onblur="this.placeholder = 'filter task'">
+                            </div>
+                            <ul class="collection"></ul>
+                        </div>
+                        <div class="center">
+                            <h5>Completed Tasks <i class="fas fa-check-circle"></i></h5>
+                            <div class="input-field">
+                                <input type="text" class="filter input center" id="filter"
+>
+                        </div>
+                        <ul class="completed"></ul>
+                        </div>
+                    </div>
+                    <div class="clear-task-btn center">
+                        <input type="button" value="Clear Tasks" class="clear-tasks btn">
+                    </div>
+                </div>
+    </div>
+    <i class="fas fa-check-circle green-check"></i>
+    <script src="js/script.js"></script>
+</body>
+</html>
